@@ -34,7 +34,7 @@ import { mockXHR } from '../mock'
 if (process.env.NODE_ENV === 'production') {
   mockXHR()
 }
-Vue.use(vueEventCalendar, {locale: 'en', weekStartOn: 1})
+Vue.use(vueEventCalendar, { locale: 'en', weekStartOn: 1 })
 
 Vue.use(Element, {
   locale,

@@ -24,7 +24,7 @@ const tableRouter = {
       hidden: true,
       component: () => import('@/views/table/drag-table'),
       name: 'DragTable',
-      meta: { title: 'Drag Table' , hidden: true}
+      meta: { title: 'Drag Table', hidden: true }
     },
     {
       path: 'inline-edit-table',

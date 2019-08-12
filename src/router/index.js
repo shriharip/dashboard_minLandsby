@@ -136,12 +136,12 @@ export const asyncRoutes = [
     component: Layout,
     redirect: '/permission/page',
     alwaysShow: false, // will always show the root menu
-   hidden: true,
+    hidden: true,
     name: 'Permission',
     meta: {
       title: 'Permission',
       icon: 'lock',
-      roles: ['test'] //['admin', 'editor'] // you can set roles in root nav
+      roles: ['test'] // ['admin', 'editor'] // you can set roles in root nav
     },
     children: [
       {
@@ -150,7 +150,7 @@ export const asyncRoutes = [
         name: 'PagePermission',
         meta: {
           title: 'Page Permission',
-          roles:  ['test'] //['admin'] // or you can only set roles in sub nav
+          roles: ['test'] // ['admin'] // or you can only set roles in sub nav
         }
       },
       {
@@ -168,7 +168,7 @@ export const asyncRoutes = [
         name: 'RolePermission',
         meta: {
           title: 'Role Permission',
-          roles: ['test'] //['admin']
+          roles: ['test'] // ['admin']
         }
       }
     ]
@@ -405,7 +405,20 @@ export const asyncRoutes = [
         path: 'events',
         component: () => import('@/views/events/events'),
         name: 'events',
-        meta: { title: 'Events', icon: 'calendar', roles: ["admin"] }
+        meta: { title: 'Events', icon: 'calendar', roles: ['admin'] }
+      }
+    ]
+  },
+
+  {
+    path: '/users',
+    component: Layout,
+    children: [
+      {
+        path: 'users',
+        component: () => import('@/views/users/users'),
+        name: 'users',
+        meta: { title: 'Users', icon: 'people', roles: ['admin'] }
       }
     ]
   },

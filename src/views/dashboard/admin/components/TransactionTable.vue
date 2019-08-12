@@ -2,12 +2,12 @@
   <el-table :data="list" style="padding-top: 15px;">
     <el-table-column label="Users" width="175">
       <template slot-scope="scope">
-        {{ scope.row.username  }}
+        {{ scope.row.username }}
       </template>
     </el-table-column>
     <el-table-column label="Village" width="195" align="center">
       <template slot-scope="scope">
-       {{ scope.row.village }}
+        {{ scope.row.village }}
       </template>
     </el-table-column>
     <el-table-column label="Date" width="150" align="center">

@@ -1,5 +1,5 @@
 <template>
-<div :class="className" :style="{height:height,width:width}" />
+  <div :class="className" :style="{height:height,width:width}" />
 </template>
 
 <script>
@@ -43,54 +43,53 @@ export default {
       this.chart = echarts.init(this.$el, 'macarons')
 
       this.chart.setOption({
-    tooltip: {
-        trigger: 'item',
-        formatter: "{a} <br/>{b}: {c} ({d}%)"
-    },
-    legend: {
-        orient: 'vertical',
-        x: 'left',
-        data:['Music','Health','Business','Children','General']
-    },
-    series: [
-        {
-            name:'Events',
-            type:'pie',
+        tooltip: {
+          trigger: 'item',
+          formatter: '{a} <br/>{b}: {c} ({d}%)'
+        },
+        legend: {
+          orient: 'vertical',
+          x: 'left',
+          data: ['Music', 'Health', 'Business', 'Children', 'General']
+        },
+        series: [
+          {
+            name: 'Events',
+            type: 'pie',
             radius: ['50%', '70%'],
             avoidLabelOverlap: false,
             label: {
-                normal: {
-                    show: false,
-                    position: 'center'
-                },
-                emphasis: {
-                    show: true,
-                    textStyle: {
-                        fontSize: '30',
-                        fontWeight: 'bold'
-                    }
+              normal: {
+                show: false,
+                position: 'center'
+              },
+              emphasis: {
+                show: true,
+                textStyle: {
+                  fontSize: '30',
+                  fontWeight: 'bold'
                 }
+              }
             },
             labelLine: {
-                normal: {
-                    show: false
-                }
+              normal: {
+                show: false
+              }
             },
-            data:[
-                {value:335, name:'Music'},
-                {value:310, name:'Health'},
-                {value:234, name:'Business'},
-                {value:135, name:'Children'},
-                {value:1548, name:'General'}
+            data: [
+              { value: 335, name: 'Music' },
+              { value: 310, name: 'Health' },
+              { value: 234, name: 'Business' },
+              { value: 135, name: 'Children' },
+              { value: 1548, name: 'General' }
             ]
-        }
-    ]
-})
+          }
+        ]
+      })
     }
   }
 }
 </script>
-
 
 <style>
 </style>

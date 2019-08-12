@@ -44,7 +44,7 @@
           </div>
           <div class="progress-item">
             <span>Arbejdsmarked og Borgerservice</span>
-           <el-progress :percentage="42"  /> <!--    status="success" -->
+            <el-progress :percentage="42" /> <!--    status="success" -->
           </div>
         </div>
       </div>

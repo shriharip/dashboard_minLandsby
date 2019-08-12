@@ -1,6 +1,6 @@
 <template>
-    <div>
-       <el-row :gutter="32">
+  <div>
+    <el-row :gutter="32">
       <el-col :xs="24" :sm="24" :lg="8">
         <div class="chart-wrapper">
           <raddar-chart />
@@ -13,19 +13,19 @@
       </el-col>
       <el-col :xs="24" :sm="24" :lg="8">
         <div class="chart-wrapper">
-          <line-chart />
+          <LineChart />
         </div>
       </el-col>
     </el-row>
-  
-   <el-row>
-       <el-col><vue-event-calendar
-       :events="demoEvents"
-       @day-changed="handleDayChanged"
-       @month-changed="handleMonthChanged"
-       ></vue-event-calendar></el-col>
-   </el-row>
-    </div>
+
+    <el-row>
+      <el-col><vue-event-calendar
+        :events="demoEvents"
+        @day-changed="handleDayChanged"
+        @month-changed="handleMonthChanged"
+      /></el-col>
+    </el-row>
+  </div>
 </template>
 
 <script>
@@ -34,35 +34,35 @@ import RaddarChart from '../../views/dashboard/admin/components/RaddarChart'
 import PieChart from '@/views/dashboard/admin/components/PieChart'
 import LineChart from './components/linechart'
 
-let today = new Date()
-    export default {
-        name: 'Events',
-        components: {RaddarChart, PieChart, LineChart},
-        data () {
+const today = new Date()
+export default {
+  name: 'Events',
+  components: { RaddarChart, PieChart, LineChart },
+  data() {
     return {
       demoEvents: [{
         date: `${today.getFullYear()}/${today.getMonth() + 1}/15`,
         title: 'KrabFestival',
         desc: 'Come for a wonderful celebration'
-      },{
+      }, {
         date: `${today.getFullYear()}/${today.getMonth() + 1}/24`,
         title: 'Jazz Night'
-      },{
+      }, {
         date: `${today.getFullYear()}/${today.getMonth() === 11 ? 1 : today.getMonth() + 2}/06`,
         title: 'Health benefits',
         desc: 'Want to know more about Diabetes?'
       }]
     }
   },
-   methods: {
-    handleDayChanged (data) {
+  methods: {
+    handleDayChanged(data) {
       console.log('date-changed', data)
     },
-    handleMonthChanged (data) {
+    handleMonthChanged(data) {
       console.log('month-changed', data)
     }
   }
-    }
+}
 </script>
 
 <style>

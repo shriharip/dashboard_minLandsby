@@ -31,9 +31,9 @@ export default {
       default: '150px'
     }
   },
-   mounted() {
+  mounted() {
     console.log(this.image)
-  },
+  }
 }
 </script>
 

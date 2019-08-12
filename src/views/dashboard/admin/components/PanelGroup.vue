@@ -10,8 +10,8 @@
             News
           </div>
           <count-to :start-val="0" :end-val="86" :duration="600" class="card-panel-num" />
-          <div class="card-panel-percent"> 
-           <i class="el-icon-arrow-up"/>  3% 
+          <div class="card-panel-percent">
+            <i class="el-icon-arrow-up" />  3%
           </div>
         </div>
       </div>
@@ -23,11 +23,11 @@
         </div>
         <div class="card-panel-description">
           <div class="card-panel-text">
-            Events 
+            Events
           </div>
           <count-to :start-val="0" :end-val="120" :duration="3000" class="card-panel-num" />
-          <div class="card-panel-percent"> 
-           <i class="el-icon-arrow-up"/>  2% 
+          <div class="card-panel-percent">
+            <i class="el-icon-arrow-up" />  2%
           </div>
         </div>
       </div>
@@ -42,8 +42,8 @@
             Maps
           </div>
           <count-to :start-val="0" :end-val="34" :duration="500" class="card-panel-num" />
-          <div class="card-panel-percent"> 
-           <i class="el-icon-arrow-up"/>  6% 
+          <div class="card-panel-percent">
+            <i class="el-icon-arrow-up" />  6%
           </div>
         </div>
       </div>
@@ -58,9 +58,9 @@
             Users
           </div>
           <count-to :start-val="0" :end-val="1600" :duration="900" class="card-panel-num" />
-          <div class="card-panel-percent"> 
-           <i class="el-icon-arrow-down"/>  4% 
-          </div>  
+          <div class="card-panel-percent">
+            <i class="el-icon-arrow-down" />  4%
+          </div>
         </div>
       </div>
     </el-col>

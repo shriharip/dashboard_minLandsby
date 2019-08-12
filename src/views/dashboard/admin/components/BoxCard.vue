@@ -47,9 +47,9 @@ export default {
     return {
       statisticsData: {
         article_count: 1024,
-        pageviews_count: 1024,
-        },
-        logo: 'https://minlandsby.dk/wp-content/uploads/2018/08/myvill_logowo.png'
+        pageviews_count: 1024
+      },
+      logo: 'https://minlandsby.dk/wp-content/uploads/2018/08/myvill_logowo.png'
     }
   },
   computed: {

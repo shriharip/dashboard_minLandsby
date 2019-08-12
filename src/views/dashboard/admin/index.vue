@@ -1,14 +1,14 @@
 <template>
   <div class="dashboard-editor-container">
     <!-- <github-corner class="github-corner" /> -->
-   <el-select v-model="value" placeholder="Select">
-    <el-option
-      v-for="item in options"
-      :key="item.value"
-      :label="item.label"
-      :value="item.value">
-    </el-option>
-  </el-select>
+    <el-select v-model="value" placeholder="Select">
+      <el-option
+        v-for="item in options"
+        :key="item.value"
+        :label="item.label"
+        :value="item.value"
+      />
+    </el-select>
 
     <panel-group @handleSetLineChartData="handleSetLineChartData" />
 
@@ -95,29 +95,28 @@ export default {
     return {
       lineChartData: lineChartData.newVisitis,
       options: [{
-          value: 'Fjaltring',
-          label: 'Fjaltring'
-        }, {
-          value: 'Klinkby',
-          label: 'Klinkby'
-        }, {
-          value: 'Ramme',
-          label: 'Ramme'
-        }, {
-          value: 'Fabjerg',
-          label: 'Fabjerg'
-        }],
-        value: ''
-     
-    }
+        value: 'Fjaltring',
+        label: 'Fjaltring'
+      }, {
+        value: 'Klinkby',
+        label: 'Klinkby'
+      }, {
+        value: 'Ramme',
+        label: 'Ramme'
+      }, {
+        value: 'Fabjerg',
+        label: 'Fabjerg'
+      }],
+      value: ''
 
+    }
   },
   watch: {
-    value: function(value){
-      var myArray = ['newVisitis', 'messages', 'purchases', 'shoppings' ]
-        var rand = myArray[Math.floor(Math.random() * myArray.length)];
-        this.handleSetLineChartData(rand);
-    } 
+    value: function(value) {
+      var myArray = ['newVisitis', 'messages', 'purchases', 'shoppings']
+      var rand = myArray[Math.floor(Math.random() * myArray.length)]
+      this.handleSetLineChartData(rand)
+    }
   },
   methods: {
     handleSetLineChartData(type) {
