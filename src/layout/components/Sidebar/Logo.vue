@@ -24,8 +24,8 @@ export default {
   },
   data() {
     return {
-      title: 'Vue Element Admin',
-      logo: 'https://wpimg.wallstcn.com/69a1c46c-eb1c-4b46-8bd4-e9e686ef5251.png'
+      title: 'Lemvig',
+      logo: 'https://minlandsby.dk/wp-content/uploads/2018/08/myvill_logowo.png'
     }
   }
 }

@@ -1,26 +1,26 @@
 <template>
   <el-card class="box-card-component" style="margin-left:8px;">
     <div slot="header" class="box-card-header">
-      <img src="https://wpimg.wallstcn.com/e7d23d71-cf19-4b90-a1cc-f56af8c0903d.png">
+      <img src="https://i0.wp.com/minlandsby.dk/wp-content/uploads/2019/01/Untitled-design.png">
     </div>
     <div style="position:relative;">
-      <pan-thumb :image="avatar" class="panThumb" />
-      <mallki class-name="mallki-text" text="vue-element-admin" />
+      <pan-thumb :image="logo" class="panThumb" />
+      <mallki class-name="mallki-text" text="App Users" />
       <div style="padding-top:35px;" class="progress-item">
-        <span>Vue</span>
+        <span>Fjaltring</span>
         <el-progress :percentage="70" />
       </div>
       <div class="progress-item">
-        <span>JavaScript</span>
+        <span>Klinkby</span>
         <el-progress :percentage="18" />
       </div>
       <div class="progress-item">
-        <span>Css</span>
+        <span>Ramme</span>
         <el-progress :percentage="12" />
       </div>
       <div class="progress-item">
-        <span>ESLint</span>
-        <el-progress :percentage="100" status="success" />
+        <span>Fabjerg</span>
+        <el-progress :percentage="42" status="success" />
       </div>
     </div>
   </el-card>
@@ -47,8 +47,9 @@ export default {
     return {
       statisticsData: {
         article_count: 1024,
-        pageviews_count: 1024
-      }
+        pageviews_count: 1024,
+        },
+        logo: 'https://minlandsby.dk/wp-content/uploads/2018/08/myvill_logowo.png'
     }
   },
   computed: {

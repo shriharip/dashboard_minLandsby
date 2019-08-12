@@ -1,20 +1,21 @@
 <template>
-  <el-table :data="list" style="width: 100%;padding-top: 15px;">
-    <el-table-column label="Order_No" min-width="200">
+  <el-table :data="list" style="padding-top: 15px;">
+    <el-table-column label="Users" width="175">
       <template slot-scope="scope">
-        {{ scope.row.order_no | orderNoFilter }}
+        {{ scope.row.username  }}
       </template>
     </el-table-column>
-    <el-table-column label="Price" width="195" align="center">
+    <el-table-column label="Village" width="195" align="center">
       <template slot-scope="scope">
-        ¥{{ scope.row.price | toThousandFilter }}
+       {{ scope.row.village }}
       </template>
     </el-table-column>
-    <el-table-column label="Status" width="100" align="center">
-      <template slot-scope="{row}">
-        <el-tag :type="row.status | statusFilter">
-          {{ row.status }}
-        </el-tag>
+    <el-table-column label="Date" width="150" align="center">
+      <template slot-scope="scope">
+        <!-- <el-tag :type="row.status | statusFilter">
+          {{ row.date }}
+        </el-tag> -->
+        {{ scope.row.date }}
       </template>
     </el-table-column>
   </el-table>

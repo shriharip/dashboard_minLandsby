@@ -12,12 +12,15 @@ import '@/styles/index.scss' // global css
 import App from './App'
 import store from './store'
 import router from './router'
+import locale from 'element-ui/lib/locale/lang/en'
 
 import './icons' // icon
 import './permission' // permission control
 import './utils/error-log' // error log
 
 import * as filters from './filters' // global filters
+
+import vueEventCalendar from 'vue-event-calendar'
 
 /**
  * If you don't want to use mock-server
@@ -31,8 +34,10 @@ import { mockXHR } from '../mock'
 if (process.env.NODE_ENV === 'production') {
   mockXHR()
 }
+Vue.use(vueEventCalendar, {locale: 'en', weekStartOn: 1})
 
 Vue.use(Element, {
+  locale,
   size: Cookies.get('size') || 'medium' // set element-ui default size
 })
 

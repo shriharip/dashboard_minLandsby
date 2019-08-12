@@ -2,53 +2,65 @@
   <el-row :gutter="40" class="panel-group">
     <el-col :xs="12" :sm="12" :lg="6" class="card-panel-col">
       <div class="card-panel" @click="handleSetLineChartData('newVisitis')">
-        <div class="card-panel-icon-wrapper icon-people">
-          <svg-icon icon-class="peoples" class-name="card-panel-icon" />
+        <div class="card-panel-icon-wrapper icon-posts">
+          <svg-icon icon-class="news" class-name="card-panel-icon" />
         </div>
         <div class="card-panel-description">
           <div class="card-panel-text">
-            New Visits
+            News
           </div>
-          <count-to :start-val="0" :end-val="102400" :duration="2600" class="card-panel-num" />
+          <count-to :start-val="0" :end-val="86" :duration="600" class="card-panel-num" />
+          <div class="card-panel-percent"> 
+           <i class="el-icon-arrow-up"/>  3% 
+          </div>
         </div>
       </div>
     </el-col>
     <el-col :xs="12" :sm="12" :lg="6" class="card-panel-col">
       <div class="card-panel" @click="handleSetLineChartData('messages')">
-        <div class="card-panel-icon-wrapper icon-message">
-          <svg-icon icon-class="message" class-name="card-panel-icon" />
+        <div class="card-panel-icon-wrapper icon-events ">
+          <svg-icon icon-class="calendar" class-name="card-panel-icon" />
         </div>
         <div class="card-panel-description">
           <div class="card-panel-text">
-            Messages
+            Events 
           </div>
-          <count-to :start-val="0" :end-val="81212" :duration="3000" class="card-panel-num" />
+          <count-to :start-val="0" :end-val="120" :duration="3000" class="card-panel-num" />
+          <div class="card-panel-percent"> 
+           <i class="el-icon-arrow-up"/>  2% 
+          </div>
         </div>
       </div>
     </el-col>
     <el-col :xs="12" :sm="12" :lg="6" class="card-panel-col">
       <div class="card-panel" @click="handleSetLineChartData('purchases')">
-        <div class="card-panel-icon-wrapper icon-money">
-          <svg-icon icon-class="money" class-name="card-panel-icon" />
+        <div class="card-panel-icon-wrapper icon-maps">
+          <svg-icon icon-class="maps" class-name="card-panel-icon" />
         </div>
         <div class="card-panel-description">
           <div class="card-panel-text">
-            Purchases
+            Maps
           </div>
-          <count-to :start-val="0" :end-val="9280" :duration="3200" class="card-panel-num" />
+          <count-to :start-val="0" :end-val="34" :duration="500" class="card-panel-num" />
+          <div class="card-panel-percent"> 
+           <i class="el-icon-arrow-up"/>  6% 
+          </div>
         </div>
       </div>
     </el-col>
     <el-col :xs="12" :sm="12" :lg="6" class="card-panel-col">
       <div class="card-panel" @click="handleSetLineChartData('shoppings')">
-        <div class="card-panel-icon-wrapper icon-shopping">
-          <svg-icon icon-class="shopping" class-name="card-panel-icon" />
+        <div class="card-panel-icon-wrapper icon-people">
+          <svg-icon icon-class="peoples" class-name="card-panel-icon" />
         </div>
         <div class="card-panel-description">
           <div class="card-panel-text">
-            Shoppings
+            Users
           </div>
-          <count-to :start-val="0" :end-val="13600" :duration="3600" class="card-panel-num" />
+          <count-to :start-val="0" :end-val="1600" :duration="900" class="card-panel-num" />
+          <div class="card-panel-percent"> 
+           <i class="el-icon-arrow-down"/>  4% 
+          </div>  
         </div>
       </div>
     </el-col>
@@ -98,15 +110,15 @@ export default {
         background: #40c9c6;
       }
 
-      .icon-message {
+      .icon-posts {
         background: #36a3f7;
       }
 
-      .icon-money {
+      .icon-maps {
         background: #f4516c;
       }
 
-      .icon-shopping {
+      .icon-events {
         background: #34bfa3
       }
     }
@@ -115,15 +127,15 @@ export default {
       color: #40c9c6;
     }
 
-    .icon-message {
+    .icon-posts {
       color: #36a3f7;
     }
 
-    .icon-money {
+    .icon-maps {
       color: #f4516c;
     }
 
-    .icon-shopping {
+    .icon-events {
       color: #34bfa3
     }
 
@@ -156,6 +168,27 @@ export default {
       .card-panel-num {
         font-size: 20px;
       }
+
+      .card-panel-percent{
+        font-size: 14px;
+      }
+
+      .icon-item {
+    margin: 20px;
+    height: 85px;
+    text-align: center;
+    width: 100px;
+    float: left;
+    font-size: 30px;
+    color: #24292e;
+    cursor: pointer;
+  }
+
+  span {
+    display: block;
+    font-size: 16px;
+    margin-top: 10px;
+  }
     }
   }
 }

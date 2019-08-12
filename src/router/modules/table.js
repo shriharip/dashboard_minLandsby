@@ -6,7 +6,7 @@ const tableRouter = {
   path: '/table',
   component: Layout,
   redirect: '/table/complex-table',
-  name: 'Table',
+  name: 'Content',
   meta: {
     title: 'Table',
     icon: 'table'
@@ -14,27 +14,30 @@ const tableRouter = {
   children: [
     {
       path: 'dynamic-table',
+      hidden: true,
       component: () => import('@/views/table/dynamic-table/index'),
       name: 'DynamicTable',
       meta: { title: 'Dynamic Table' }
     },
     {
       path: 'drag-table',
+      hidden: true,
       component: () => import('@/views/table/drag-table'),
       name: 'DragTable',
-      meta: { title: 'Drag Table' }
+      meta: { title: 'Drag Table' , hidden: true}
     },
     {
       path: 'inline-edit-table',
+      hidden: true,
       component: () => import('@/views/table/inline-edit-table'),
       name: 'InlineEditTable',
-      meta: { title: 'Inline Edit' }
+      meta: { title: 'Inline Edit', hidden: true }
     },
     {
       path: 'complex-table',
       component: () => import('@/views/table/complex-table'),
       name: 'ComplexTable',
-      meta: { title: 'Complex Table' }
+      meta: { title: 'Posts' }
     }
   ]
 }

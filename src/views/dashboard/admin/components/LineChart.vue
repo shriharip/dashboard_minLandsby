@@ -92,24 +92,25 @@ export default {
         legend: {
           data: ['expected', 'actual']
         },
-        series: [{
-          name: 'expected', itemStyle: {
-            normal: {
-              color: '#FF005A',
-              lineStyle: {
-                color: '#FF005A',
-                width: 2
-              }
-            }
-          },
-          smooth: true,
-          type: 'line',
-          data: expectedData,
-          animationDuration: 2800,
-          animationEasing: 'cubicInOut'
-        },
+        series: [
+        //   {
+        //   name: 'expected', itemStyle: {
+        //     normal: {
+        //       color: '#FF005A',
+        //       lineStyle: {
+        //         color: '#FF005A',
+        //         width: 2
+        //       }
+        //     }
+        //   },
+        //   smooth: true,
+        //   type: 'line',
+        //   data: expectedData,
+        //   animationDuration: 2800,
+        //   animationEasing: 'cubicInOut'
+        // },
         {
-          name: 'actual',
+          name: 'total',
           smooth: true,
           type: 'line',
           itemStyle: {

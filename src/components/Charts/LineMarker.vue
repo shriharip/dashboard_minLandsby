@@ -1,5 +1,7 @@
 <template>
-  <div :id="id" :class="className" :style="{height:height,width:width}" />
+
+    <div :id="id" :class="className" :style="{height:height,width:width}" />
+
 </template>
 
 <script>
@@ -49,7 +51,7 @@ export default {
         backgroundColor: '#394056',
         title: {
           top: 20,
-          text: 'Requests',
+          text: 'App Users: Content Posted',
           textStyle: {
             fontWeight: 'normal',
             fontSize: 16,
@@ -71,7 +73,7 @@ export default {
           itemWidth: 14,
           itemHeight: 5,
           itemGap: 13,
-          data: ['CMCC', 'CTCC', 'CUCC'],
+          data: ['Lemvig', 'Holstebro', 'Struer'],
           right: '4%',
           textStyle: {
             fontSize: 12,
@@ -119,7 +121,7 @@ export default {
           }
         }],
         series: [{
-          name: 'CMCC',
+          name: 'Lemvig',
           type: 'line',
           smooth: true,
           symbol: 'circle',
@@ -153,7 +155,7 @@ export default {
           },
           data: [220, 182, 191, 134, 150, 120, 110, 125, 145, 122, 165, 122]
         }, {
-          name: 'CTCC',
+          name: 'Holstebro',
           type: 'line',
           smooth: true,
           symbol: 'circle',
@@ -187,7 +189,7 @@ export default {
           },
           data: [120, 110, 125, 145, 122, 165, 122, 220, 182, 191, 134, 150]
         }, {
-          name: 'CUCC',
+          name: 'Struer',
           type: 'line',
           smooth: true,
           symbol: 'circle',

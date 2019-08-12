@@ -42,7 +42,9 @@ export default [
             timestamp: +Mock.Random.date('T'),
             username: '@name()',
             price: '@float(1000, 15000, 0, 2)',
-            'status|1': ['success', 'pending']
+            'status|1': ['success', 'pending'],
+            'village|1': ['Fjaltring', 'Klinby', 'Ramme', 'Fabjerg', 'Tangsoe'],
+            'date':  `@integer(1,30) - @integer(1,12)`
           }]
         }
       }

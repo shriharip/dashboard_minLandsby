@@ -1,6 +1,14 @@
 <template>
   <div class="dashboard-editor-container">
-    <github-corner class="github-corner" />
+    <!-- <github-corner class="github-corner" /> -->
+   <el-select v-model="value" placeholder="Select">
+    <el-option
+      v-for="item in options"
+      :key="item.value"
+      :label="item.label"
+      :value="item.value">
+    </el-option>
+  </el-select>
 
     <panel-group @handleSetLineChartData="handleSetLineChartData" />
 
@@ -27,12 +35,12 @@
     </el-row>
 
     <el-row :gutter="8">
-      <el-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 12}" :xl="{span: 12}" style="padding-right:8px;margin-bottom:30px;">
+      <el-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 12}" :lg="{span: 12}" :xl="{span: 12}" style="padding-right:8px;margin-bottom:30px;">
         <transaction-table />
       </el-col>
-      <el-col :xs="{span: 24}" :sm="{span: 12}" :md="{span: 12}" :lg="{span: 6}" :xl="{span: 6}" style="margin-bottom:30px;">
+      <!-- <el-col :xs="{span: 24}" :sm="{span: 12}" :md="{span: 12}" :lg="{span: 6}" :xl="{span: 6}" style="margin-bottom:30px;">
         <todo-list />
-      </el-col>
+      </el-col> -->
       <el-col :xs="{span: 24}" :sm="{span: 12}" :md="{span: 12}" :lg="{span: 6}" :xl="{span: 6}" style="margin-bottom:30px;">
         <box-card />
       </el-col>
@@ -54,19 +62,19 @@ import BoxCard from './components/BoxCard'
 const lineChartData = {
   newVisitis: {
     expectedData: [100, 120, 161, 134, 105, 160, 165],
-    actualData: [120, 82, 91, 154, 162, 140, 145]
+    actualData: [20, 34, 44, 56, 76, 78, 80]
   },
   messages: {
     expectedData: [200, 192, 120, 144, 160, 130, 140],
-    actualData: [180, 160, 151, 106, 145, 150, 130]
+    actualData: [34, 54, 23, 62, 75, 56, 89, 120]
   },
   purchases: {
     expectedData: [80, 100, 121, 104, 105, 90, 100],
-    actualData: [120, 90, 100, 138, 142, 130, 130]
+    actualData: [12, 14, 8, 16, 23, 14, 34]
   },
   shoppings: {
     expectedData: [130, 140, 141, 142, 145, 150, 160],
-    actualData: [120, 82, 91, 154, 162, 140, 130]
+    actualData: [1200, 820, 910, 1540, 1620, 1400, 1300]
   }
 }
 
@@ -85,8 +93,31 @@ export default {
   },
   data() {
     return {
-      lineChartData: lineChartData.newVisitis
+      lineChartData: lineChartData.newVisitis,
+      options: [{
+          value: 'Fjaltring',
+          label: 'Fjaltring'
+        }, {
+          value: 'Klinkby',
+          label: 'Klinkby'
+        }, {
+          value: 'Ramme',
+          label: 'Ramme'
+        }, {
+          value: 'Fabjerg',
+          label: 'Fabjerg'
+        }],
+        value: ''
+     
     }
+
+  },
+  watch: {
+    value: function(value){
+      var myArray = ['newVisitis', 'messages', 'purchases', 'shoppings' ]
+        var rand = myArray[Math.floor(Math.random() * myArray.length)];
+        this.handleSetLineChartData(rand);
+    } 
   },
   methods: {
     handleSetLineChartData(type) {
@@ -101,6 +132,8 @@ export default {
   padding: 32px;
   background-color: rgb(240, 242, 245);
   position: relative;
+  background: url(https://minlandsby.dk/wp-content/uploads/2018/01/baggrund.png) center center fixed;
+    background-size: cover;
 
   .github-corner {
     position: absolute;

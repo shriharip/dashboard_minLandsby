@@ -61,11 +61,11 @@
           <span style="color:red;">{{ scope.row.reviewer }}</span>
         </template>
       </el-table-column>
-      <el-table-column label="Imp" width="80px">
+      <!-- <el-table-column label="Imp" width="80px">
         <template slot-scope="scope">
           <svg-icon v-for="n in +scope.row.importance" :key="n" icon-class="star" class="meta-item__icon" />
         </template>
-      </el-table-column>
+      </el-table-column> -->
       <el-table-column label="Readings" align="center" width="95">
         <template slot-scope="{row}">
           <span v-if="row.pageviews" class="link-type" @click="handleFetchPv(row.pageviews)">{{ row.pageviews }}</span>
@@ -153,10 +153,10 @@ import { parseTime } from '@/utils'
 import Pagination from '@/components/Pagination' // secondary package based on el-pagination
 
 const calendarTypeOptions = [
-  { key: 'CN', display_name: 'China' },
-  { key: 'US', display_name: 'USA' },
-  { key: 'JP', display_name: 'Japan' },
-  { key: 'EU', display_name: 'Eurozone' }
+  { key: 'CN', display_name: 'Fjaltring' },
+  { key: 'US', display_name: 'Klinkby' },
+  { key: 'JP', display_name: 'Fabjerg' },
+  { key: 'EU', display_name: 'Ramme' }
 ]
 
 // arr to obj, such as { CN : "China", US : "USA" }
@@ -248,7 +248,7 @@ export default {
     },
     handleModifyStatus(row, status) {
       this.$message({
-        message: '操作Success',
+        message: 'Success',
         type: 'success'
       })
       row.status = status

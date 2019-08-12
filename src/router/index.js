@@ -85,18 +85,20 @@ export const constantRoutes = [
   },
   {
     path: '/documentation',
+    hidden: true,
     component: Layout,
     children: [
       {
         path: 'index',
         component: () => import('@/views/documentation/index'),
         name: 'Documentation',
-        meta: { title: 'Documentation', icon: 'documentation', affix: true }
+        meta: { title: 'Documentation', icon: 'documentation', affix: false }
       }
     ]
   },
   {
     path: '/guide',
+    hidden: true,
     component: Layout,
     redirect: '/guide/index',
     children: [
@@ -133,12 +135,13 @@ export const asyncRoutes = [
     path: '/permission',
     component: Layout,
     redirect: '/permission/page',
-    alwaysShow: true, // will always show the root menu
+    alwaysShow: false, // will always show the root menu
+   hidden: true,
     name: 'Permission',
     meta: {
       title: 'Permission',
       icon: 'lock',
-      roles: ['admin', 'editor'] // you can set roles in root nav
+      roles: ['test'] //['admin', 'editor'] // you can set roles in root nav
     },
     children: [
       {
@@ -147,7 +150,7 @@ export const asyncRoutes = [
         name: 'PagePermission',
         meta: {
           title: 'Page Permission',
-          roles: ['admin'] // or you can only set roles in sub nav
+          roles:  ['test'] //['admin'] // or you can only set roles in sub nav
         }
       },
       {
@@ -165,7 +168,7 @@ export const asyncRoutes = [
         name: 'RolePermission',
         meta: {
           title: 'Role Permission',
-          roles: ['admin']
+          roles: ['test'] //['admin']
         }
       }
     ]
@@ -173,6 +176,7 @@ export const asyncRoutes = [
 
   {
     path: '/icon',
+    hidden: true,
     component: Layout,
     children: [
       {
@@ -192,6 +196,7 @@ export const asyncRoutes = [
 
   {
     path: '/example',
+    hidden: true,
     component: Layout,
     redirect: '/example/list',
     name: 'Example',
@@ -224,6 +229,7 @@ export const asyncRoutes = [
 
   {
     path: '/tab',
+    hidden: true,
     component: Layout,
     children: [
       {
@@ -237,6 +243,7 @@ export const asyncRoutes = [
 
   {
     path: '/error',
+    hidden: true,
     component: Layout,
     redirect: 'noRedirect',
     name: 'ErrorPages',
@@ -262,6 +269,7 @@ export const asyncRoutes = [
 
   {
     path: '/error-log',
+    hidden: true,
     component: Layout,
     children: [
       {
@@ -275,6 +283,7 @@ export const asyncRoutes = [
 
   {
     path: '/excel',
+    hidden: true,
     component: Layout,
     redirect: '/excel/export-excel',
     name: 'Excel',
@@ -312,6 +321,7 @@ export const asyncRoutes = [
 
   {
     path: '/zip',
+    hidden: true,
     component: Layout,
     redirect: '/zip/download',
     alwaysShow: true,
@@ -329,6 +339,7 @@ export const asyncRoutes = [
 
   {
     path: '/pdf',
+    hidden: true,
     component: Layout,
     redirect: '/pdf/index',
     children: [
@@ -348,6 +359,7 @@ export const asyncRoutes = [
 
   {
     path: '/theme',
+    hidden: true,
     component: Layout,
     children: [
       {
@@ -361,6 +373,7 @@ export const asyncRoutes = [
 
   {
     path: '/clipboard',
+    hidden: true,
     component: Layout,
     children: [
       {
@@ -374,6 +387,7 @@ export const asyncRoutes = [
 
   {
     path: 'external-link',
+    hidden: true,
     component: Layout,
     children: [
       {
@@ -383,6 +397,18 @@ export const asyncRoutes = [
     ]
   },
 
+  {
+    path: '/events',
+    component: Layout,
+    children: [
+      {
+        path: 'events',
+        component: () => import('@/views/events/events'),
+        name: 'events',
+        meta: { title: 'Events', icon: 'calendar', roles: ["admin"] }
+      }
+    ]
+  },
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
 ]

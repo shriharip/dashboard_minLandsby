@@ -6,7 +6,7 @@
       </div>
     </div>
     <!-- eslint-disable-next-line -->
-    <div :style="{backgroundImage: `url(${image})`}" class="pan-thumb"></div>
+    <div :style="{backgroundImage: `url(${image})`, backgroundColor: '#198287'}" class="pan-thumb"></div>
   </div>
 </template>
 
@@ -30,7 +30,10 @@ export default {
       type: String,
       default: '150px'
     }
-  }
+  },
+   mounted() {
+    console.log(this.image)
+  },
 }
 </script>
 
@@ -132,7 +135,7 @@ export default {
 }
 
 .pan-item:hover .pan-thumb {
-  transform: rotate(-110deg);
+ /* transform: rotate(-180deg); */
 }
 
 .pan-item:hover .pan-info p a {
